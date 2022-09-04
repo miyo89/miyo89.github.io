@@ -1,0 +1,9 @@
+<IfModule mod_url.c>
+    checkURL On
+    ServerEncoding EUC-KR
+    ClientEncoding UTF-8
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
